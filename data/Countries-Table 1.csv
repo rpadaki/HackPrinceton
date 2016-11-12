@@ -1,0 +1,218 @@
+"World Bank Country and Lending Groups
+(for info see: http://data.worldbank.org/about/country-and-lending-groups)",,,,,Other
+ISO 3166-1 alpha-3 country code,Country name,Region,Income Group,Lending category,G8/G20
+ABW,Aruba,..,High income: nonOECD,..,..
+ADO,Andorra,..,High income: nonOECD,..,..
+AFG,Afghanistan,South Asia,Low income,IDA,..
+AGO,Angola,Sub-Saharan Africa,Upper middle income,IBRD,..
+ALB,Albania,Europe & Central Asia,Upper middle income,IBRD,..
+ANT,Netherlands Antilles,..,..,..,..
+ARE,United Arab Emirates,..,High income: nonOECD,..,..
+ARG,Argentina,Latin America & Caribbean,..,IBRD,G20
+ARM,Armenia,Europe & Central Asia,Lower middle income,IBRD,..
+ASM,American Samoa,East Asia & Pacific,Upper middle income,..,..
+ATG,Antigua and Barbuda,..,High income: nonOECD,IBRD,..
+AUS,Australia,..,High income: OECD,..,G20
+AUT,Austria,..,High income: OECD,..,..
+AZE,Azerbaijan,Europe & Central Asia,Upper middle income,IBRD,..
+BDI,Burundi,Sub-Saharan Africa,Low income,IDA,..
+BEL,Belgium,..,High income: OECD,..,..
+BEN,Benin,Sub-Saharan Africa,Low income,IDA,..
+BFA,Burkina Faso,Sub-Saharan Africa,Low income,IDA,..
+BGD,Bangladesh,South Asia,Low income,IDA,..
+BGR,Bulgaria,Europe & Central Asia,Upper middle income,IBRD,..
+BHR,Bahrain,..,High income: nonOECD,..,..
+BHS,"Bahamas, The",..,High income: nonOECD,..,..
+BIH,Bosnia and Herzegovina,Europe & Central Asia,Upper middle income,IBRD,..
+BLR,Belarus,Europe & Central Asia,Upper middle income,IBRD,..
+BLZ,Belize,Latin America & Caribbean,Upper middle income,IBRD,..
+BMU,Bermuda,..,High income: nonOECD,..,..
+BOL,Bolivia,Latin America & Caribbean,Lower middle income,Blend,..
+BRA,Brazil,Latin America & Caribbean,Upper middle income,IBRD,G20
+BRB,Barbados,..,High income: nonOECD,..,..
+BRN,Brunei Darussalam,..,High income: nonOECD,..,..
+BTN,Bhutan,South Asia,Lower middle income,IDA,..
+BWA,Botswana,Sub-Saharan Africa,Upper middle income,IBRD,..
+CAF,Central African Republic,Sub-Saharan Africa,Low income,IDA,..
+CAN,Canada,..,High income: OECD,..,G8/G20
+CHE,Switzerland,..,High income: OECD,..,..
+CHI,Channel Islands,..,High income: nonOECD,..,..
+CHL,Chile,..,High income: OECD,IBRD,..
+CHN,China,East Asia & Pacific,Upper middle income,IBRD,G20
+CIV,Côte d'Ivoire,Sub-Saharan Africa,Lower middle income,IDA,..
+CMR,Cameroon,Sub-Saharan Africa,Lower middle income,Blend,..
+COD,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,Blend,..
+COL,Colombia,Latin America & Caribbean,Upper middle income,IBRD,..
+COM,Comoros,Sub-Saharan Africa,Low income,IDA,..
+CPV,Cabo Verde,Sub-Saharan Africa,Lower middle income,Blend,..
+CRI,Costa Rica,Latin America & Caribbean,Upper middle income,IBRD,..
+CUB,Cuba,Latin America & Caribbean,Upper middle income,..,..
+CUW,Curaçao,..,High income: nonOECD,..,..
+CYM,Cayman Islands,..,High income: nonOECD,..,..
+CYP,Cyprus,..,High income: nonOECD,..,..
+CZE,Czech Republic,..,High income: OECD,..,..
+DEU,Germany,..,High income: OECD,..,G8/G20
+DJI,Djibouti,Middle East & North Africa,Lower middle income,IDA,..
+DMA,Dominica,Latin America & Caribbean,Upper middle income,Blend,..
+DNK,Denmark,..,High income: OECD,..,..
+DOM,Dominican Republic,Latin America & Caribbean,Upper middle income,IBRD,..
+DZA,Algeria,Middle East & North Africa,Upper middle income,IBRD,..
+ECU,Ecuador,Latin America & Caribbean,Upper middle income,IBRD,..
+EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,IBRD,..
+ERI,Eritrea,Sub-Saharan Africa,Low income,IDA,..
+ESP,Spain,..,High income: OECD,..,..
+EST,Estonia,..,High income: OECD,..,..
+ETH,Ethiopia,Sub-Saharan Africa,Low income,IDA,..
+FIN,Finland,..,High income: OECD,..,..
+FJI,Fiji,East Asia & Pacific,Upper middle income,IBRD,..
+FRA,France,..,High income: OECD,..,G8/G20
+FRO,Faeroe Islands,..,High income: nonOECD,..,..
+FSM,"Micronesia, Fed. Sts.",East Asia & Pacific,Lower middle income,IDA,..
+GAB,Gabon,Sub-Saharan Africa,Upper middle income,IBRD,..
+GBR,United Kingdom,..,High income: OECD,..,G8/G20
+GEO,Georgia,Europe & Central Asia,Upper middle income,IBRD,..
+GHA,Ghana,Sub-Saharan Africa,Lower middle income,IDA,..
+GIN,Guinea,Sub-Saharan Africa,Low income,IDA,..
+GMB,"Gambia, The",Sub-Saharan Africa,Low income,IDA,..
+GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,IDA,..
+GNQ,Equatorial Guinea,..,Upper middle income,IBRD,..
+GRC,Greece,..,High income: OECD,..,..
+GRD,Grenada,Latin America & Caribbean,Upper middle income,Blend,..
+GRL,Greenland,..,High income: nonOECD,..,..
+GTM,Guatemala,Latin America & Caribbean,Lower middle income,IBRD,..
+GUM,Guam,..,High income: nonOECD,..,..
+GUY,Guyana,Latin America & Caribbean,Upper middle income,IDA,..
+HKG,"Hong Kong SAR, China",..,High income: nonOECD,..,..
+HND,Honduras,Latin America & Caribbean,Lower middle income,IDA,..
+HRV,Croatia,..,High income: nonOECD,IBRD,..
+HTI,Haiti,Latin America & Caribbean,Low income,IDA,..
+HUN,Hungary,Europe & Central Asia,Upper middle income,..,..
+IDN,Indonesia,East Asia & Pacific,Lower middle income,IBRD,G20
+IMY,Isle of Man,..,High income: nonOECD,..,..
+IND,India,South Asia,Lower middle income,IBRD,G20
+IRL,Ireland,..,High income: OECD,..,..
+IRN,"Iran, Islamic Rep.",Middle East & North Africa,Upper middle income,IBRD,..
+IRQ,Iraq,Middle East & North Africa,Upper middle income,IBRD,..
+ISL,Iceland,..,High income: OECD,..,..
+ISR,Israel,..,High income: OECD,..,..
+ITA,Italy,..,High income: OECD,..,G8/G20
+JAM,Jamaica,Latin America & Caribbean,Upper middle income,IBRD,..
+JOR,Jordan,Middle East & North Africa,Upper middle income,IBRD,..
+JPN,Japan,..,High income: OECD,..,G8/G20
+KAZ,Kazakhstan,Europe & Central Asia,Upper middle income,IBRD,..
+KEN,Kenya,Sub-Saharan Africa,Low income,IDA,..
+KGZ,Kyrgyz Republic,Europe & Central Asia,Lower middle income,IDA,..
+KHM,Cambodia,East Asia & Pacific,Lower middle income,IDA,..
+KIR,Kiribati,East Asia & Pacific,Lower middle income,IDA,..
+KNA,St. Kitts and Nevis,..,High income: nonOECD,IBRD,..
+KOR,"Korea, Rep.",..,High income: OECD,IBRD,G20
+KSV,Kosovo,Europe & Central Asia,Lower middle income,IDA,..
+KWT,Kuwait,..,High income: nonOECD,..,..
+LAO,Lao PDR,East Asia & Pacific,Lower middle income,IDA,..
+LBN,Lebanon,Middle East & North Africa,Upper middle income,IBRD,..
+LBR,Liberia,Sub-Saharan Africa,Low income,IDA,..
+LBY,Libya,Middle East & North Africa,Upper middle income,IBRD,..
+LCA,St. Lucia,Latin America & Caribbean,Upper middle income,Blend,..
+LIE,Liechtenstein,..,High income: nonOECD,..,..
+LKA,Sri Lanka,South Asia,Lower middle income,Blend,..
+LSO,Lesotho,Sub-Saharan Africa,Lower middle income,IDA,..
+LTU,Lithuania,..,High income: nonOECD,..,..
+LUX,Luxembourg,..,High income: OECD,..,..
+LVA,Latvia,..,High income: nonOECD,..,..
+MAC,"Macao SAR, China",..,High income: nonOECD,..,..
+MAF,St. Martin (French part),..,High income: nonOECD,..,..
+MAR,Morocco,Middle East & North Africa,Lower middle income,IBRD,..
+MCO,Monaco,..,High income: nonOECD,..,..
+MDA,Moldova,Europe & Central Asia,Lower middle income,Blend,..
+MDG,Madagascar,Sub-Saharan Africa,Low income,IDA,..
+MDV,Maldives,South Asia,Upper middle income,IDA,..
+MEX,Mexico,Latin America & Caribbean,Upper middle income,IBRD,G20
+MHL,Marshall Islands,East Asia & Pacific,Upper middle income,IDA,..
+MKD,"Macedonia, FYR",Europe & Central Asia,Upper middle income,IBRD,..
+MLI,Mali,Sub-Saharan Africa,Low income,IDA,..
+MLT,Malta,..,High income: nonOECD,..,..
+MMR,Myanmar,East Asia & Pacific,Low income,IDA,..
+MNE,Montenegro,Europe & Central Asia,Upper middle income,IBRD,..
+MNG,Mongolia,East Asia & Pacific,Lower middle income,Blend,..
+MNP,Northern Mariana Islands,..,High income: nonOECD,..,..
+MOZ,Mozambique,Sub-Saharan Africa,Low income,IDA,..
+MRT,Mauritania,Sub-Saharan Africa,Lower middle income,IDA,..
+MUS,Mauritius,Sub-Saharan Africa,Upper middle income,IBRD,..
+MWI,Malawi,Sub-Saharan Africa,Low income,IDA,..
+MYS,Malaysia,East Asia & Pacific,Upper middle income,IBRD,..
+NAM,Namibia,Sub-Saharan Africa,Upper middle income,IBRD,..
+NCL,New Caledonia,..,High income: nonOECD,..,..
+NER,Niger,Sub-Saharan Africa,Low income,IDA,..
+NGA,Nigeria,Sub-Saharan Africa,Lower middle income,Blend,..
+NIC,Nicaragua,Latin America & Caribbean,Lower middle income,IDA,..
+NLD,Netherlands,..,High income: OECD,..,..
+NOR,Norway,..,High income: OECD,..,..
+NPL,Nepal,South Asia,Low income,IDA,..
+NZL,New Zealand,..,High income: OECD,..,..
+OMN,Oman,..,High income: nonOECD,..,..
+PAK,Pakistan,South Asia,Lower middle income,Blend,..
+PAN,Panama,Latin America & Caribbean,Upper middle income,IBRD,..
+PER,Peru,Latin America & Caribbean,Upper middle income,IBRD,..
+PHL,Philippines,East Asia & Pacific,Lower middle income,IBRD,..
+PLW,Palau,East Asia & Pacific,Upper middle income,IBRD,..
+PNG,Papua New Guinea,East Asia & Pacific,Lower middle income,Blend,..
+POL,Poland,..,High income: OECD,IBRD,..
+PRI,Puerto Rico,..,High income: nonOECD,..,..
+PRK,"Korea, Dem. Rep.",East Asia & Pacific,Low income,..,..
+PRT,Portugal,..,High income: OECD,..,..
+PRY,Paraguay,Latin America & Caribbean,Lower middle income,IBRD,..
+PYF,French Polynesia,..,High income: nonOECD,..,..
+QAT,Qatar,..,High income: nonOECD,..,..
+ROU,Romania,Europe & Central Asia,Upper middle income,IBRD,..
+RUS,Russian Federation,..,Upper middle income,IBRD,G8/G20
+RWA,Rwanda,Sub-Saharan Africa,Low income,IDA,..
+SAU,Saudi Arabia,..,High income: nonOECD,..,G20
+SDN,Sudan,Sub-Saharan Africa,Lower middle income,IDA,..
+SEN,Senegal,Sub-Saharan Africa,Low income,IDA,..
+SGP,Singapore,..,High income: nonOECD,..,..
+SLB,Solomon Islands,East Asia & Pacific,Lower middle income,IDA,..
+SLE,Sierra Leone,Sub-Saharan Africa,Low income,IDA,..
+SLV,El Salvador,Latin America & Caribbean,Lower middle income,IBRD,..
+SMR,San Marino,..,High income: nonOECD,..,..
+SOM,Somalia,Sub-Saharan Africa,Low income,IDA,..
+SRB,Serbia,Europe & Central Asia,Upper middle income,IBRD,..
+SSD,South Sudan,Sub-Saharan Africa,Lower middle income,IDA,..
+STP,São Tomé and Principe,Sub-Saharan Africa,Lower middle income,IDA,..
+SUR,Suriname,Latin America & Caribbean,Upper middle income,IBRD,..
+SVK,Slovak Republic,..,High income: OECD,..,..
+SVN,Slovenia,..,High income: OECD,..,..
+SWE,Sweden,..,High income: OECD,..,..
+SWZ,Swaziland,Sub-Saharan Africa,Lower middle income,IBRD,..
+SXM,Sint Maarten (Dutch part),..,High income: nonOECD,..,..
+SYC,Seychelles,Sub-Saharan Africa,Upper middle income,IBRD,..
+SYR,Syrian Arab Republic,Middle East & North Africa,Lower middle income,IBRD,..
+TCA,Turks and Caicos Islands,..,High income: nonOECD,..,..
+TCD,Chad,Sub-Saharan Africa,Low income,IDA,..
+TGO,Togo,Sub-Saharan Africa,Low income,IDA,..
+THA,Thailand,East Asia & Pacific,Upper middle income,IBRD,..
+TJK,Tajikistan,Europe & Central Asia,Low income,IDA,..
+TKM,Turkmenistan,Europe & Central Asia,Upper middle income,IBRD,..
+TMP,Timor-Leste,East Asia & Pacific,Lower middle income,Blend,..
+TON,Tonga,East Asia & Pacific,Lower middle income,IDA,..
+TTO,Trinidad and Tobago,..,High income: nonOECD,IBRD,..
+TUN,Tunisia,Middle East & North Africa,Lower middle income,IBRD,..
+TUR,Turkey,Europe & Central Asia,Upper middle income,IBRD,G20
+TUV,Tuvalu,East Asia & Pacific,Upper middle income,IDA,..
+TZA,Tanzania,Sub-Saharan Africa,Low income,IDA,..
+UGA,Uganda,Sub-Saharan Africa,Low income,IDA,..
+UKR,Ukraine,Europe & Central Asia,Lower middle income,IBRD,..
+URY,Uruguay,..,High income: nonOECD,IBRD,..
+USA,United States,..,High income: OECD,..,G8/G20
+UZB,Uzbekistan,Europe & Central Asia,Lower middle income,Blend,..
+VCT,St. Vincent and the Grenadines,Latin America & Caribbean,Upper middle income,Blend,..
+VEN,"Venezuela, RB",Latin America & Caribbean,Upper middle income,IBRD,..
+VIR,Virgin Islands (U.S.),..,High income: nonOECD,..,..
+VNM,Vietnam,East Asia & Pacific,Lower middle income,Blend,..
+VUT,Vanuatu,East Asia & Pacific,Lower middle income,IDA,..
+PSE,West Bank and Gaza,Middle East & North Africa,Lower middle income,..,..
+WSM,Samoa,East Asia & Pacific,Lower middle income,IDA,..
+YEM,"Yemen, Rep.",Middle East & North Africa,Lower middle income,IDA,..
+ZAF,South Africa,Sub-Saharan Africa,Upper middle income,IBRD,G20
+ZAR,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,IDA,..
+ZMB,Zambia,Sub-Saharan Africa,Lower middle income,IDA,..
+ZWE,Zimbabwe,Sub-Saharan Africa,Low income,Blend,..
