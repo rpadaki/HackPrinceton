@@ -5,12 +5,27 @@ from scripts import pathfinder as pf
 from scripts import grapher as gr
 import numpy as np
 import json
-from flask import Flask, request, Response
+from flask import Flask, render_template, request, Response
 from project.server import app
 
+<<<<<<< HEAD
+@app.route('/', methods=['GET', 'POST'])
+def home():
+	print("hello")
+	if request.method == 'POST':
+		value = int(request.form['number'])
+		add_one = value
+		return render_template('index.html', string="TESTING", value=add_one)
+	return render_template('index.html', string="TESTING DEFAULT")
+=======
 countries = cg.analyze()
+<<<<<<< HEAD
 name_dict = {}
 # name_dict = {k:v.name for k, v in countries.items()}
+=======
+name_dict = {k:v.name for k, v in countries.items()}
+>>>>>>> 35055a50cab046621d2ba3cae7df892ed0a27780
+>>>>>>> 20512c096987b12807ef58f637c2e233d581e3a5
 
 @app.route('/graph')
 def graph():
@@ -103,4 +118,4 @@ def path():
 	return(resp)
 
 if __name__ == "__main__":
-	app.run()
+	app.run(debug=True) # Auto-update server in test/dev environment
