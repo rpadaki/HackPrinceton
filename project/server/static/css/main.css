@@ -1,0 +1,169 @@
+/* Space out content a bit */
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a.hover {
+    text-decoration: none;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Custom page header */
+.header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+}
+
+/* NAVBAR */
+/* Make navbar transparent */
+.navbar {
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* Hover */
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    transition: background-color 0.5s ease;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    color: #fff;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+/* PANELS */
+.panel-active {
+    transition: all .05s ease-in-out;
+    -moz-transition: all .5s ease-in-out; /* Firefox 4 */
+    -webkit-transition: all .3s ease-in-out; /* Safari and Chrome */
+    -o-transition: all .5s ease-in-out; /* Opera */
+    -ms-transition: all .5s ease-in-out; /* IE9 (maybe) */
+}
+
+.panel-active:hover {
+    transform: scale(1.0);
+    opacity: 0.9;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16), 0 1px 2px rgba(0, 0, 0, 0.23);
+    /*background-color: #f5f5f5;*/
+}
+
+
+.panel div {
+    text-decoration: none !important;
+}
+
+/* Panel links */
+a .panel {
+    display: block;
+}
+
+a .panel-heading, .panel-body {
+    text-decoration: none;
+}
+
+a.panel-text:hover {
+    text-decoration: none;
+    color: #337ab7;
+}
+
+.panel>.list-group .list-group-item:hover {
+    background-color: #f5f5f5;
+}
+
+.table-hover>tbody>tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Custom page footer */
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+    .container {
+        max-width: 2000px;
+    }
+}
+.container-narrow > hr {
+    margin: 15px 0;
+}
+
+/* Delay showing questionnaire button */
+#view-button {
+    display: none;
+}
+
+/* Smooth Transitions */
+.animate-in {
+    -webkit-animation: fadeIn .5s ease-in;
+    animation: fadeIn .2s ease-in;
+}
+
+.animate-out {
+    -webkit-transition: opacity .5s;
+    transition: opacity .2s;
+    opacity: 0;
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+    padding: 14px 24px;
+    font-size: 21px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
