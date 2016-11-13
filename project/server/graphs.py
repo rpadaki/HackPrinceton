@@ -12,14 +12,16 @@ countries = cg.analyze()
 name_dict = {}
 # name_dict = {k:v.name for k, v in countries.items()}
 
-@app.route('/', methods=['GET', 'POST'])
-def home():
-	print("hello")
-	if request.method == 'POST':
-		value = int(request.form['number'])
-		add_one = value
-		return render_template('index.html', string="TESTING", value=add_one)
-	return render_template('index.html', string="TESTING DEFAULT")
+@app.route('/')
+# def submitMoney():
+# 	print("hello")
+# 	if request.method == '':
+# 		value = int(request.form['number'])
+# 		add_one = value
+# 		return render_template('index.html', string="TESTING", value=add_one)
+# 	return render_template('index.html', string="TESTING DEFAULT")
+def root():
+    return render_template('index.html')
 
 @app.route('/graph')
 def graph():

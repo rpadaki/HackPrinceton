@@ -20,6 +20,11 @@
     <!-- React router -->
     <script src="https://npmcdn.com/react-router@2.4.0/umd/ReactRouter.min.js"></script>
 
+    <script src="static/bower_components/jquery/dist/jquery.js"></script>
+
+    <!-- D3.js -->
+    <script src="static/d3.js"></script>
+
 </head>
 <body>
 
@@ -32,19 +37,22 @@
     </div>
 
     <div class="container">
-        <div class="container animate-in" id="dataCanvas"></div>
+        <div class="container" id="dataCanvas"></div>
     </div>
 
     <div class="container text-center center-block">
         <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <form role="form" method="post">
+                <form role="form" method="post" id="money_form">
                     <div class="input-group input-group-lg">
                         <span class="input-group-addon" id="sizing-addon1">$</span>
-                        <input type="number" class="form-control offset-md-4" name="number" placeholder="Enter Transfer Amount (USD)">
+                        <input type="number" class="form-control offset-md-4" placeholder="Enter Transfer Amount (USD)" id="money_input">
                         <span class="input-group-btn">
+                            <!-- <button class="btn btn-default" type="button" onclick="getData()">Submit</button> -->
                             <button class="btn btn-default" type="button">Submit</button>
+
+                            <!--<div class="container btn" id="dataCanvas"></div>-->
                         </span>
                     </div>
                 </form>
@@ -55,63 +63,65 @@
 
     <div id=''></div>
 
-    <script type="text/babel">
-        class moneyForm extends React.Component {
-            constructor(props) {
-                super(props);
-                this.state = {value: ''};
-                this.handleChange = this.handleChange.bind(this);
-                this.handleSubmit = this.handleSubmit.bind(this);
-            }
+    <!--<script type="text/babel">-->
+        <!--class MoneyForm extends React.Component {-->
+            <!--constructor(props) {-->
+                <!--super(props);-->
+                <!--this.state = {value: ''};-->
+                <!--this.handleChange = this.handleChange.bind(this);-->
+                <!--this.handleSubmit = this.handleSubmit.bind(this);-->
+            <!--}-->
 
-            handleChange(event) {
-                this.setState({value: event.target.value});
-            }
+            <!--handleChange(event) {-->
+                <!--this.setState({value: event.target.value});-->
+            <!--}-->
 
-            handleSubmit(event) {
-                alert('A name was submitted: ' + this.state.value);
-                event.preventDefault();
-            }
+            <!--handleSubmit(event) {-->
+                <!--alert('A name was submitted: ' + this.state.value);-->
+                <!--event.preventDefault();-->
+            <!--}-->
 
-            render() {
-                return (
-                        <form role="form" onSubmit={this.handleSubmit}>
-                            <div class="input-group input-group-lg">
-                                <span class="input-group-addon" id="sizing-addon1">$</span>
-                                <input type="number" class="form-control offset-md-4" name="number" placeholder="Enter Transfer Amount (USD)" value={this.state.value} onChange={this.handleChange} />
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="submit" value="Submit">Submit</button>
-                                </span>
-                            </div>
-                        </form>
-                );
-            }
-        }
+            <!--render() {-->
+                <!--return (-->
+                        <!--<form role="form" onSubmit={this.handleSubmit}>-->
+                            <!--<div class="input-group input-group-lg">-->
+                                <!--<span class="input-group-addon" id="sizing-addon1">$</span>-->
+                                <!--<input type="number" class="form-control offset-md-4" name="number" placeholder="Enter Transfer Amount (USD)" value={this.state.value} onChange={this.handleChange} />-->
+                                <!--<span class="input-group-btn">-->
+                                    <!--<button class="btn btn-default" type="submit" value="Submit">Submit</button>-->
+                                <!--</span>-->
+                            <!--</div>-->
+                        <!--</form>-->
+                <!--);-->
+            <!--}-->
+        <!--}-->
 
-        function formatName(user) {
-            return user.firstName + ' ' + user.lastName;
-        }
+        <!--var element = (<MoneyForm />);-->
 
-        const user = {
-            firstName: 'Harper',
-            lastName: 'Perez'
-        };
 
-        const element = (<h1>Hello, {formatName(user)}!</h1>);
-
-        var App = React.createClass({
-            render: function() {
-                return (
-
-                )
-            }
+        <!--React.render(-->
+                <!--<MoneyForm />,-->
+        <!--document.getElementById('dataCanvas')-->
+        <!--);-->
+    <!--</script>-->
+<script src = "static/get_data.js"></script>
+<script>
+$(document).ready(function () {
+    $("button").click(function() {
+        $.get('/graph?amount='+document.getElementById("money_input").value, function(data) {
+            console.log(data);
         });
-
-        ReactDOM.render(
-        element,
-        document.getElementById('dataCanvas')
-        );
-    </script>
+    });
+        // var money = document.getElementById("money_form").value;
+        // console.log(money);
+        // console.log(typeof document.getElementById("money_input").value);
+        // console.log(document.getElementById("money_input").value);
+        // var xhr = new XMLHttpRequest();
+        // var data = xhr.open('GET', '/graph?amount=' + document.getElementById("money_input").value, true);
+        // console.log(xhr.open('GET', '/graph?amount=' + document.getElementById("money_input").value, true)); 
+    
+});
+</script>
 
 </body>
 </html>
