@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import networkx as nx
 from networkx.readwrite import json_graph as jg
 import pathfindertesting
@@ -19,7 +18,7 @@ def graph():
 
 if __name__ == "__main__":
 	app.run()
-=======
+
 import d3py
 import networkx as nx
 import logging
@@ -33,4 +32,3 @@ for start in opt:
 with d3py.NetworkXFigure(g,width=500, height=500) as p:
 	p += d3py.ForceLayout()
 	p.show()
->>>>>>> bca8b0139cfeb6016edc723de250b0a90d3eac97
