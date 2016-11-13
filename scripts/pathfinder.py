@@ -13,4 +13,4 @@ def compute(connections):
         g.add_edge(edge[0], edge[1], weight=edge[2])
 
     predecessors, distance = nx.floyd_warshall_predecessor_and_distance(g, weight='weight')
-    return predecessors, distance
+    return g, predecessors, distance
