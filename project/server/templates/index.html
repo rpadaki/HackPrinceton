@@ -1,128 +1,132 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<style>
-.links line {
-  stroke: #999;
-  stroke-opacity: 0.6;
-}
-.nodes circle {
-  stroke: #fff;
-  stroke-width: 15px;
-}
-</style>
-<svg width="960" height="600"></svg>
-<script src="static/js/d3.js"></script>
-<script>
-var svg = d3.select("svg"),
-    width = +svg.attr("width"),
-    height = +svg.attr("height");
-var color = d3.scaleOrdinal(d3.schemeCategory20);
-var simulation = d3.forceSimulation()
-    .force("link", d3.forceLink().id(function(d) { return d.id; }))
-    .force("charge", d3.forceManyBody())
-    .force("center", d3.forceCenter(width / 2, height / 2));
-d3.json("/orbit?amount=300&start=USA", function(error, graph) {
-  if (error) throw error;
-  var link = svg.append("g")
-      .attr("class", "links")
-    .selectAll("line")
-    .data(graph.links)
-    .enter().append("line")
-      .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
-  var node = svg.append("g")
-      .attr("class", "nodes")
-    .selectAll("circle")
-    .data(graph.nodes)
-    .enter().append("circle")
-      .attr("r", 5)
-      .attr("fill", function(d) { return color(d.group); })
-      .call(d3.drag()
-          .on("start", dragstarted)
-          .on("drag", dragged)
-          .on("end", dragended));
-  node.append("title")
-      .text(function(d) { return d.id; });
-  simulation
-      .nodes(graph.nodes)
-      .on("tick", ticked);
-  simulation.force("link")
-      .links(graph.links);
-  function ticked() {
-    link
-        .attr("x1", function(d) { return d.source.x; })
-        .attr("y1", function(d) { return d.source.y; })
-        .attr("x2", function(d) { return d.target.x; })
-        .attr("y2", function(d) { return d.target.y; });
-    node
-        .attr("cx", function(d) { return d.x; })
-        .attr("cy", function(d) { return d.y; });
-  }
-});
-function dragstarted(d) {
-  if (!d3.event.active) simulation.alphaTarget(0.3).restart();
-  d.fx = d.x;
-  d.fy = d.y;
-}
-function dragged(d) {
-  d.fx = d3.event.x;
-  d.fy = d3.event.y;
-}
-function dragended(d) {
-  if (!d3.event.active) simulation.alphaTarget(0);
-  d.fx = null;
-  d.fy = null;
-}
-</script>
+<<<<<<< HEAD
 =======
-            handleChange(event) {
-                this.setState({value: event.target.value});
-            }
+<<<<<<< HEAD
+>>>>>>> 0f6feb88f58e32c2d0e35d9b39083b232aad5dde
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Template</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 
-            handleSubmit(event) {
-                alert('A name was submitted: ' + this.state.value);
-                event.preventDefault();
-            }
+    <!-- CSS -->
+    <link rel="stylesheet" href="static/bower_components/bootstrap/dist/css/bootstrap.min.css"  />
+    <link rel="stylesheet" href="static/css/main.css" />
+    <!--<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 
-            render() {
-                return (
-                        <form role="form" onSubmit={this.handleSubmit}>
-                            <div class="input-group input-group-lg">
-                                <span class="input-group-addon" id="sizing-addon1">$</span>
-                                <input type="number" class="form-control offset-md-4" name="number" placeholder="Enter Transfer Amount (USD)" value={this.state.value} onChange={this.handleChange} />
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="submit" value="Submit">Submit</button>
-                                </span>
-                            </div>
-                        </form>
-                );
-            }
+    <!-- React script dependency -->
+    <script src="static/bower_components/react/react.js"></script>
+    <script src="static/bower_components/react/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- React router -->
+    <script src="https://npmcdn.com/react-router@2.4.0/umd/ReactRouter.min.js"></script>
+
+    <script src="static/bower_components/jquery/dist/jquery.js"></script>
+
+    <!-- D3.js -->
+    <script src="static/d3.js"></script>
+
+    <style>
+        .links line {
+            stroke: #999;
+            stroke-opacity: 0.6;
         }
 
-        function formatName(user) {
-            return user.firstName + ' ' + user.lastName;
+        .nodes circle {
+            stroke:#fff;
+            stroke-width:1.5px;
         }
+    </style>
+</head>
+<body>
 
-        const user = {
-            firstName: 'Harper',
-            lastName: 'Perez'
-        };
+    <!-- Parent container for React components -->
+    <div class="container animate-in center-block text-center">
+        <h1>Arbritage to Eliminate Global Remittance Inefficiency</h1>
 
-        const element = (<h1>Hello, {formatName(user)}!</h1>);
+        <svg width="960" height="600"></svg>
+    </div>
 
-        var App = React.createClass({
-            render: function() {
-                return (
+    <div class="container">
+        <div class="container" id="dataCanvas"></div>
+    </div>
 
-                )
-            }
-        });
+    <div class="container text-center center-block">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <form role="form" method="post" id="money_form">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-addon" id="sizing-addon1">$</span>
+                        <input type="number" class="form-control offset-md-4" placeholder="Enter Transfer Amount (USD)" id="money_input">
+                        <span class="input-group-btn">
+                            <!-- <button class="btn btn-default" type="button" onclick="getData()">Submit</button> -->
+                            <button class="btn btn-default" type="button">Submit</button>
 
-        ReactDOM.render(
-        element,
-        document.getElementById('dataCanvas')
-        );
-    </script>
+                            <!--<div class="container btn" id="dataCanvas"></div>-->
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
 
+    </div>
+
+    <!-- Actual viz -->
+
+    <!--<script type="text/babel">-->
+        <!--class MoneyForm extends React.Component {-->
+            <!--constructor(props) {-->
+                <!--super(props);-->
+                <!--this.state = {value: ''};-->
+                <!--this.handleChange = this.handleChange.bind(this);-->
+                <!--this.handleSubmit = this.handleSubmit.bind(this);-->
+            <!--}-->
+
+            <!--handleChange(event) {-->
+                <!--this.setState({value: event.target.value});-->
+            <!--}-->
+
+            <!--handleSubmit(event) {-->
+                <!--alert('A name was submitted: ' + this.state.value);-->
+                <!--event.preventDefault();-->
+            <!--}-->
+
+            <!--render() {-->
+                <!--return (-->
+                        <!--<form role="form" onSubmit={this.handleSubmit}>-->
+                            <!--<div class="input-group input-group-lg">-->
+                                <!--<span class="input-group-addon" id="sizing-addon1">$</span>-->
+                                <!--<input type="number" class="form-control offset-md-4" name="number" placeholder="Enter Transfer Amount (USD)" value={this.state.value} onChange={this.handleChange} />-->
+                                <!--<span class="input-group-btn">-->
+                                    <!--<button class="btn btn-default" type="submit" value="Submit">Submit</button>-->
+                                <!--</span>-->
+                            <!--</div>-->
+                        <!--</form>-->
+                <!--);-->
+            <!--}-->
+        <!--}-->
+
+        <!--var element = (<MoneyForm />);-->
+
+
+        <!--React.render(-->
+                <!--<MoneyForm />,-->
+        <!--document.getElementById('dataCanvas')-->
+        <!--);-->
+    <!--</script>-->
+<script src = "static/get_data.js"></script>
+<script>
+$(document).ready(function () {
+    $("button").click(function() {
+        $.get('/graph?amount='+document.getElementById("money_input").value, function(data) {
+            console.log(data);
+            });
+            });
+        });        
+        </script>
 </body>
 </html>
->>>>>>> afd7618e5f49d4a771702229b2e2eed1230f6319
