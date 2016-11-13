@@ -8,7 +8,10 @@ import json
 from flask import Flask, render_template, request, Response
 from project.server import app
 
-<<<<<<< HEAD
+countries = cg.analyze()
+name_dict = {}
+# name_dict = {k:v.name for k, v in countries.items()}
+
 @app.route('/', methods=['GET', 'POST'])
 def home():
 	print("hello")
@@ -17,15 +20,6 @@ def home():
 		add_one = value
 		return render_template('index.html', string="TESTING", value=add_one)
 	return render_template('index.html', string="TESTING DEFAULT")
-=======
-countries = cg.analyze()
-<<<<<<< HEAD
-name_dict = {}
-# name_dict = {k:v.name for k, v in countries.items()}
-=======
-name_dict = {k:v.name for k, v in countries.items()}
->>>>>>> 35055a50cab046621d2ba3cae7df892ed0a27780
->>>>>>> 20512c096987b12807ef58f637c2e233d581e3a5
 
 @app.route('/graph')
 def graph():
