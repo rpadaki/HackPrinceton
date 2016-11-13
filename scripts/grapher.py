@@ -57,6 +57,3 @@ def planet(start, distances):
 			g.add_edge(start, key, weight=value)
 
 	return g
-
-
-

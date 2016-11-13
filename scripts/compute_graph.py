@@ -45,7 +45,7 @@ def generate(amount, countries):
     connections = []
     for country in countries:
         for country_dest in countries[country].links:
-            countries[country].getMinLink(10000., country_dest)
+            countries[country].getMinLink(amount, country_dest)
             row = [country, country_dest, countries[country].costs[country_dest]]
             connections.append(row)
     return connections
