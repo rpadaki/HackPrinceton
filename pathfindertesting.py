@@ -14,12 +14,11 @@ def compute(connections):
 
 	# find shortest paths between all nodes
 	paths = nx.all_pairs_dijkstra_path(g)
-	print(paths)
 
 	# find shortest path length between all nodes
 	opt = nx.all_pairs_dijkstra_path_length(g)
-	print(opt)
+	return paths, opt
 
-if __name__ == "__main__":
+def test():
 	cxs = [["AUS", "USA", 61],["AUS","CHN",28.8],["AUS","GBR",11.6],["GBR","CHN",53],["CHN","GBR",33]]
-	compute(cxs)
+	return compute(cxs)
