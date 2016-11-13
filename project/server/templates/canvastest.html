@@ -13,6 +13,7 @@
 }
 
 </style>
+<p></p>
 <svg width="960" height="600"></svg>
 <script src="static/js/d3.js"></script>
 <script>
@@ -28,38 +29,43 @@ var simulation = d3.forceSimulation()
     .force("charge", d3.forceManyBody())
     .force("center", d3.forceCenter(width / 2, height / 2));
 
-d3.json("/orbit?amount=300&start=USA", function(error, graph) {
+d3.json("/orbit?amount=300?start=USA", function(error, graph) {
   if (error) throw error;
+  console.log(graph)
+
 
   var link = svg.append("g")
       .attr("class", "links")
     .selectAll("line")
     .data(graph["links"])
     .enter().append("line")
-      .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
-
+      .attr("stroke-width", function(d) { return d["weight"]; });
+console.log(43)
   var node = svg.append("g")
       .attr("class", "nodes")
     .selectAll("circle")
     .data(graph["nodes"])
     .enter().append("circle")
       .attr("r", 5)
-      .attr("fill", function(d) { return color(d.group); })
+      .attr("fill", function(d) { return color(1); })
       .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
-          .on("end", dragended));
-
-  node.append("title")
-      .text(function(d) { return d.id; });
-
+          .on("end", dragended))
+	.append("title")
+      .text(function(d) { return d["id"]; });
+console.log(57)
   simulation
-      .nodes(graph.nodes)
+      .nodes(graph["nodes"])
       .on("tick", ticked);
-
-  simulation.force("link")
-      .links(graph.links);
-
+console.log(61)
+  // simulation.force("link")
+  	console.log(64)
+  // simulation.links(graph["links"]);
+  simulation
+  	.force("link")
+  	.links(graph["links"]);
+console.log(64)
   function ticked() {
     link
         .attr("x1", function(d) { return d.source.x; })

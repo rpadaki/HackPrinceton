@@ -25,7 +25,7 @@ def home():
 @app.route('/graph')
 def graph():
 	try:
-		amount = float(request.args.get('amount',''))
+		amount = float(request.args.get('amount'))
 	except ValueError:
 		amount = 200.
 	connections = cg.generate(amount,countries)
@@ -53,8 +53,8 @@ def graph():
 @app.route('/orbit')
 def orbit():
 	try:
-		amount = float(request.args.get('amount',''))
-		start = request.args.get('start','')
+		amount = float(request.args.get('amount'))
+		start = request.args.get('start')
 	except ValueError:
 		amount = 200.
 		start = 'USA'
@@ -83,9 +83,9 @@ def orbit():
 @app.route('/path')
 def path():
 	try:
-		amount = float(request.args.get('amount',''))
-		start = request.args.get('start','')
-		end = request.args.get('end','')
+		amount = float(request.args.get('amount'))
+		start = request.args.get('start')
+		end = request.args.get('end')
 	except ValueError:
 		amount = 200.
 		start = ''
