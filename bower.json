@@ -1,0 +1,21 @@
+{
+  "name": "HackPrinceton App",
+  "homepage": "https://github.com/rpadaki/HackPrinceton",
+  "authors": [
+    "Michael Zhang <mzhang2016@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "react": "^15.1.0",
+  }
+}
