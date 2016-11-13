@@ -14,217 +14,61 @@
       "name": "table",
       "values": [
         {
-          "col": "Metric_0",
-          "idx": "Data 1",
-          "val": 59
-        },
-        {
-          "col": "Metric_1",
-          "idx": "Data 1",
-          "val": 24
-        },
-        {
-          "col": "Metric_2",
-          "idx": "Data 1",
-          "val": 87
-        },
-        {
-          "col": "Metric_3",
-          "idx": "Data 1",
-          "val": 60
-        },
-        {
-          "col": "Metric_4",
-          "idx": "Data 1",
-          "val": 66
-        },
-        {
-          "col": "Metric_5",
-          "idx": "Data 1",
-          "val": 55
-        },
-        {
-          "col": "Metric_6",
-          "idx": "Data 1",
-          "val": 95
-        },
-        {
-          "col": "Metric_7",
-          "idx": "Data 1",
-          "val": 26
-        },
-        {
-          "col": "Metric_8",
-          "idx": "Data 1",
-          "val": 61
-        },
-        {
-          "col": "Metric_9",
-          "idx": "Data 1",
-          "val": 33
-        },
-        {
-          "col": "Metric_0",
-          "idx": "Data 2",
-          "val": 74
-        },
-        {
-          "col": "Metric_1",
-          "idx": "Data 2",
-          "val": 83
-        },
-        {
-          "col": "Metric_2",
-          "idx": "Data 2",
-          "val": 22
-        },
-        {
-          "col": "Metric_3",
-          "idx": "Data 2",
-          "val": 97
-        },
-        {
-          "col": "Metric_4",
-          "idx": "Data 2",
-          "val": 86
-        },
-        {
-          "col": "Metric_5",
-          "idx": "Data 2",
-          "val": 13
-        },
-        {
-          "col": "Metric_6",
-          "idx": "Data 2",
-          "val": 31
-        },
-        {
-          "col": "Metric_7",
-          "idx": "Data 2",
-          "val": 54
-        },
-        {
-          "col": "Metric_8",
-          "idx": "Data 2",
-          "val": 98
-        },
-        {
-          "col": "Metric_9",
-          "idx": "Data 2",
-          "val": 76
-        },
-        {
-          "col": "Metric_0",
-          "idx": "Data 3",
+          "col": "data",
+          "idx": 0,
           "val": 10
         },
         {
-          "col": "Metric_1",
-          "idx": "Data 3",
-          "val": 90
+          "col": "data",
+          "idx": 1,
+          "val": 20
         },
         {
-          "col": "Metric_2",
-          "idx": "Data 3",
-          "val": 27
+          "col": "data",
+          "idx": 2,
+          "val": 30
         },
         {
-          "col": "Metric_3",
-          "idx": "Data 3",
-          "val": 25
+          "col": "data",
+          "idx": 3,
+          "val": 20
         },
         {
-          "col": "Metric_4",
-          "idx": "Data 3",
-          "val": 19
+          "col": "data",
+          "idx": 4,
+          "val": 15
         },
         {
-          "col": "Metric_5",
-          "idx": "Data 3",
-          "val": 14
+          "col": "data",
+          "idx": 5,
+          "val": 30
         },
         {
-          "col": "Metric_6",
-          "idx": "Data 3",
-          "val": 46
+          "col": "data",
+          "idx": 6,
+          "val": 45
+        }
+      ]
+    },
+    {
+      "name": "stats",
+      "source": "table",
+      "transform": [
+        {
+          "keys": [
+            "data.idx"
+          ],
+          "type": "facet"
         },
         {
-          "col": "Metric_7",
-          "idx": "Data 3",
-          "val": 66
-        },
-        {
-          "col": "Metric_8",
-          "idx": "Data 3",
-          "val": 28
-        },
-        {
-          "col": "Metric_9",
-          "idx": "Data 3",
-          "val": 34
-        },
-        {
-          "col": "Metric_0",
-          "idx": "Data 4",
-          "val": 38
-        },
-        {
-          "col": "Metric_1",
-          "idx": "Data 4",
-          "val": 19
-        },
-        {
-          "col": "Metric_2",
-          "idx": "Data 4",
-          "val": 75
-        },
-        {
-          "col": "Metric_3",
-          "idx": "Data 4",
-          "val": 27
-        },
-        {
-          "col": "Metric_4",
-          "idx": "Data 4",
-          "val": 66
-        },
-        {
-          "col": "Metric_5",
-          "idx": "Data 4",
-          "val": 79
-        },
-        {
-          "col": "Metric_6",
-          "idx": "Data 4",
-          "val": 71
-        },
-        {
-          "col": "Metric_7",
-          "idx": "Data 4",
-          "val": 91
-        },
-        {
-          "col": "Metric_8",
-          "idx": "Data 4",
-          "val": 16
-        },
-        {
-          "col": "Metric_9",
-          "idx": "Data 4",
-          "val": 91
+          "type": "stats",
+          "value": "data.val"
         }
       ]
     }
   ],
   "height": 500,
-  "legends": [
-    {
-      "fill": "color",
-      "offset": 0,
-      "properties": {},
-      "title": "Categories"
-    }
-  ],
+  "legends": [],
   "marks": [
     {
       "from": {
@@ -232,9 +76,14 @@
         "transform": [
           {
             "keys": [
-              "data.idx"
+              "data.col"
             ],
             "type": "facet"
+          },
+          {
+            "height": "data.val",
+            "point": "data.idx",
+            "type": "stack"
           }
         ]
       },
@@ -249,45 +98,23 @@
               "width": {
                 "band": true,
                 "offset": -1,
-                "scale": "pos"
+                "scale": "x"
               },
               "x": {
-                "field": "data.col",
-                "scale": "pos"
+                "field": "data.idx",
+                "scale": "x"
               },
               "y": {
-                "field": "data.val",
+                "field": "y",
                 "scale": "y"
               },
               "y2": {
-                "scale": "y",
-                "value": 0
+                "field": "y2",
+                "scale": "y"
               }
             }
           },
           "type": "rect"
-        }
-      ],
-      "properties": {
-        "enter": {
-          "width": {
-            "band": true,
-            "scale": "x"
-          },
-          "x": {
-            "field": "key",
-            "scale": "x"
-          }
-        }
-      },
-      "scales": [
-        {
-          "domain": {
-            "field": "data.col"
-          },
-          "name": "pos",
-          "range": "width",
-          "type": "ordinal"
         }
       ],
       "type": "group"
@@ -301,14 +128,14 @@
         "field": "data.idx"
       },
       "name": "x",
-      "padding": 0.2,
       "range": "width",
-      "type": "ordinal"
+      "type": "ordinal",
+      "zero": false
     },
     {
       "domain": {
-        "data": "table",
-        "field": "data.val"
+        "data": "stats",
+        "field": "sum"
       },
       "name": "y",
       "nice": true,
@@ -320,21 +147,9 @@
         "field": "data.col"
       },
       "name": "color",
-      "range": [
-        "#9e0142",
-        "#d53e4f",
-        "#f46d43",
-        "#fdae61",
-        "#fee08b",
-        "#ffffbf",
-        "#e6f598",
-        "#abdda4",
-        "#66c2a5",
-        "#3288bd",
-        "#5e4fa2"
-      ],
+      "range": "category20",
       "type": "ordinal"
     }
   ],
-  "width": 750
+  "width": 960
 }

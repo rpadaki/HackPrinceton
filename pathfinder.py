@@ -1,29 +1,21 @@
 import networkx as nx
-import matplotlib as mpl
 
 """ Processes graph data to find shortest paths and path lengths
 between every node in the graph """
 
-# sets up basic graph
-countries = 7
-g = nx.DiGraph()
-g.add_nodes_from(range(1, countries))
+def compute(connections):
 
-# open and read data file, adding all vertices to graph
-# each line is assumed to be a vertex in the form: [start] [end] [weight]
-reader = open("data.txt", "r")
-for line in reader:
-	current = line.split()
-	g.add_edge(int(current[0]), int(current[1]), weight=float(current[2]))
-reader.close()
+	# sets up basic graph, noting that nodes will be added implicitly
+	g = nx.DiGraph()
 
-nx.write_edgelist(g, "edges.txt")
+	# add all edges from connections
+	for edge in connections:
+		g.add_edge(edge[0], edge[1], weight=edge[2])
 
-# find shortest paths between all nodes
-paths = nx.all_pairs_dijkstra_path(g)
-print(paths)
+	# find shortest paths between all nodes
+	paths = nx.all_pairs_dijkstra_path(g)
+	print(paths)
 
-# find shortest path length between all nodes
-opt = nx.all_pairs_dijkstra_path_length(g)
-print(opt)
-
+	# find shortest path length between all nodes
+	opt = nx.all_pairs_dijkstra_path_length(g)
+	print(opt)
