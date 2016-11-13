@@ -1,9 +1,9 @@
 import sys
-
-COUNTRY_NAME_DIR = "../data/countries.csv"
-ROW_DATA_DIR_1 = "../data/dataset1.csv"
-ROW_DATA_DIR_2 = "../data/dataset2.csv"
-OUTPUT_DIR = "../data/clean_data.csv"
+import numpy as np
+COUNTRY_NAME_DIR = "data/countries.csv"
+ROW_DATA_DIR_1 = "data/dataset1.csv"
+ROW_DATA_DIR_2 = "data/dataset2.csv"
+OUTPUT_DIR = "data/clean_data.csv"
 
 CATEGORIES = ["source_code", "source_name", "source_income", "destination_code", "destination_name", "firm", "firm_type", "total_cost_200", "total_cost_500"]
 CATEGORY_NUM = [2, 3, 5, 8, 9, 14, 15, 25, 32]
@@ -24,7 +24,7 @@ class Country:
 
     #Returns the links with the least cost based on the amount to send
     def calculateCost(self, cost_200, cost_500, amount):
-        return (5/300 * cost_500 - 2/300 * cost_200) * amount + (-10/3 * cost_500 + 10/3 * cost_200)
+        return (5./300. * cost_500 - 2./300. * cost_200) * amount + (-10./3. * cost_500 + 10./3. * cost_200)
 
     def getMinLink(self, send_amount, country_dest):
       min_cost = sys.maxsize
@@ -71,5 +71,10 @@ def analyze():
             header = lines[0].split(',')
             for row in range(1, len(lines)):
                 data_split = lines[row].split(',')
+                try:
+                	cost_200 = float(data_split[find_index("total_cost_200")])
+                	cost_500 = float(data_split[find_index("total_cost_500")])
+                except ValueError:
+                	continue
                 countries[data_split[find_index("source_code")]].addLink(data_split[find_index("destination_code")], data_split[find_index("total_cost_200")], data_split[find_index("total_cost_500")],data_split[find_index("firm")])
     return countries
