@@ -1,0 +1,22 @@
+{
+  "name": "hack_princeton-app",
+  "version": "1.0.0",
+  "description": "Yo this is going to be a dank web app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rpadaki/HackPrinceton.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rpadaki/HackPrinceton/issues"
+  },
+  "homepage": "https://github.com/rpadaki/HackPrinceton#readme",
+  "devDependencies": {
+    "bower": "^1.8.0"
+  }
+}
