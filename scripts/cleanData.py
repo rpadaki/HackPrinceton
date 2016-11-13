@@ -29,7 +29,6 @@ class Country:
         for country in self.links:
             min_cost = sys.maxsize
             for pair in self.links[country]:
-                print(pair)
                 try:
                     cost_200 = float(pair[0])
                     cost_500 = float(pair[1])
