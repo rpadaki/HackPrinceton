@@ -75,10 +75,14 @@
 
             render() {
                 return (
-                        <form onSubmit={this.handleSubmit}>
-                            Name:
-                            <input type="text" value={this.state.value} onChange={this.handleChange} />
-                            <input type="submit" value="Submit" />
+                        <form role="form" onSubmit={this.handleSubmit}>
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-addon" id="sizing-addon1">$</span>
+                                <input type="number" class="form-control offset-md-4" name="number" placeholder="Enter Transfer Amount (USD)" value={this.state.value} onChange={this.handleChange} />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit" value="Submit">Submit</button>
+                                </span>
+                            </div>
                         </form>
                 );
             }
