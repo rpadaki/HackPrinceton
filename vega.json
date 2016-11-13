@@ -1,0 +1,340 @@
+{
+  "axes": [
+    {
+      "scale": "x",
+      "type": "x"
+    },
+    {
+      "scale": "y",
+      "type": "y"
+    }
+  ],
+  "data": [
+    {
+      "name": "table",
+      "values": [
+        {
+          "col": "Metric_0",
+          "idx": "Data 1",
+          "val": 59
+        },
+        {
+          "col": "Metric_1",
+          "idx": "Data 1",
+          "val": 24
+        },
+        {
+          "col": "Metric_2",
+          "idx": "Data 1",
+          "val": 87
+        },
+        {
+          "col": "Metric_3",
+          "idx": "Data 1",
+          "val": 60
+        },
+        {
+          "col": "Metric_4",
+          "idx": "Data 1",
+          "val": 66
+        },
+        {
+          "col": "Metric_5",
+          "idx": "Data 1",
+          "val": 55
+        },
+        {
+          "col": "Metric_6",
+          "idx": "Data 1",
+          "val": 95
+        },
+        {
+          "col": "Metric_7",
+          "idx": "Data 1",
+          "val": 26
+        },
+        {
+          "col": "Metric_8",
+          "idx": "Data 1",
+          "val": 61
+        },
+        {
+          "col": "Metric_9",
+          "idx": "Data 1",
+          "val": 33
+        },
+        {
+          "col": "Metric_0",
+          "idx": "Data 2",
+          "val": 74
+        },
+        {
+          "col": "Metric_1",
+          "idx": "Data 2",
+          "val": 83
+        },
+        {
+          "col": "Metric_2",
+          "idx": "Data 2",
+          "val": 22
+        },
+        {
+          "col": "Metric_3",
+          "idx": "Data 2",
+          "val": 97
+        },
+        {
+          "col": "Metric_4",
+          "idx": "Data 2",
+          "val": 86
+        },
+        {
+          "col": "Metric_5",
+          "idx": "Data 2",
+          "val": 13
+        },
+        {
+          "col": "Metric_6",
+          "idx": "Data 2",
+          "val": 31
+        },
+        {
+          "col": "Metric_7",
+          "idx": "Data 2",
+          "val": 54
+        },
+        {
+          "col": "Metric_8",
+          "idx": "Data 2",
+          "val": 98
+        },
+        {
+          "col": "Metric_9",
+          "idx": "Data 2",
+          "val": 76
+        },
+        {
+          "col": "Metric_0",
+          "idx": "Data 3",
+          "val": 10
+        },
+        {
+          "col": "Metric_1",
+          "idx": "Data 3",
+          "val": 90
+        },
+        {
+          "col": "Metric_2",
+          "idx": "Data 3",
+          "val": 27
+        },
+        {
+          "col": "Metric_3",
+          "idx": "Data 3",
+          "val": 25
+        },
+        {
+          "col": "Metric_4",
+          "idx": "Data 3",
+          "val": 19
+        },
+        {
+          "col": "Metric_5",
+          "idx": "Data 3",
+          "val": 14
+        },
+        {
+          "col": "Metric_6",
+          "idx": "Data 3",
+          "val": 46
+        },
+        {
+          "col": "Metric_7",
+          "idx": "Data 3",
+          "val": 66
+        },
+        {
+          "col": "Metric_8",
+          "idx": "Data 3",
+          "val": 28
+        },
+        {
+          "col": "Metric_9",
+          "idx": "Data 3",
+          "val": 34
+        },
+        {
+          "col": "Metric_0",
+          "idx": "Data 4",
+          "val": 38
+        },
+        {
+          "col": "Metric_1",
+          "idx": "Data 4",
+          "val": 19
+        },
+        {
+          "col": "Metric_2",
+          "idx": "Data 4",
+          "val": 75
+        },
+        {
+          "col": "Metric_3",
+          "idx": "Data 4",
+          "val": 27
+        },
+        {
+          "col": "Metric_4",
+          "idx": "Data 4",
+          "val": 66
+        },
+        {
+          "col": "Metric_5",
+          "idx": "Data 4",
+          "val": 79
+        },
+        {
+          "col": "Metric_6",
+          "idx": "Data 4",
+          "val": 71
+        },
+        {
+          "col": "Metric_7",
+          "idx": "Data 4",
+          "val": 91
+        },
+        {
+          "col": "Metric_8",
+          "idx": "Data 4",
+          "val": 16
+        },
+        {
+          "col": "Metric_9",
+          "idx": "Data 4",
+          "val": 91
+        }
+      ]
+    }
+  ],
+  "height": 500,
+  "legends": [
+    {
+      "fill": "color",
+      "offset": 0,
+      "properties": {},
+      "title": "Categories"
+    }
+  ],
+  "marks": [
+    {
+      "from": {
+        "data": "table",
+        "transform": [
+          {
+            "keys": [
+              "data.idx"
+            ],
+            "type": "facet"
+          }
+        ]
+      },
+      "marks": [
+        {
+          "properties": {
+            "enter": {
+              "fill": {
+                "field": "data.col",
+                "scale": "color"
+              },
+              "width": {
+                "band": true,
+                "offset": -1,
+                "scale": "pos"
+              },
+              "x": {
+                "field": "data.col",
+                "scale": "pos"
+              },
+              "y": {
+                "field": "data.val",
+                "scale": "y"
+              },
+              "y2": {
+                "scale": "y",
+                "value": 0
+              }
+            }
+          },
+          "type": "rect"
+        }
+      ],
+      "properties": {
+        "enter": {
+          "width": {
+            "band": true,
+            "scale": "x"
+          },
+          "x": {
+            "field": "key",
+            "scale": "x"
+          }
+        }
+      },
+      "scales": [
+        {
+          "domain": {
+            "field": "data.col"
+          },
+          "name": "pos",
+          "range": "width",
+          "type": "ordinal"
+        }
+      ],
+      "type": "group"
+    }
+  ],
+  "padding": "auto",
+  "scales": [
+    {
+      "domain": {
+        "data": "table",
+        "field": "data.idx"
+      },
+      "name": "x",
+      "padding": 0.2,
+      "range": "width",
+      "type": "ordinal"
+    },
+    {
+      "domain": {
+        "data": "table",
+        "field": "data.val"
+      },
+      "name": "y",
+      "nice": true,
+      "range": "height"
+    },
+    {
+      "domain": {
+        "data": "table",
+        "field": "data.col"
+      },
+      "name": "color",
+      "range": [
+        "#9e0142",
+        "#d53e4f",
+        "#f46d43",
+        "#fdae61",
+        "#fee08b",
+        "#ffffbf",
+        "#e6f598",
+        "#abdda4",
+        "#66c2a5",
+        "#3288bd",
+        "#5e4fa2"
+      ],
+      "type": "ordinal"
+    }
+  ],
+  "width": 750
+}

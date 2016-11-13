@@ -1,0 +1,31 @@
+{
+  "nodes": [
+    {"id": "AUS", "group": 1},
+    {"id": "GBR", "group": 1},
+    {"id": "JOR", "group": 2},
+    {"id": "DEU", "group": 1},
+    {"id": "KWT", "group": 3}
+  ],
+  "links": [
+    {"source": "AUS", "target": "GBR", "value": 0.5},
+    {"source": "AUS", "target": "JOR", "value": 0.5},
+    {"source": "AUS", "target": "DEU", "value": 0.4},
+    {"source": "AUS", "target": "KWT", "value": 0.6},
+    {"source": "GBR", "target": "AUS", "value": 52},
+    {"source": "GBR", "target": "JOR", "value": 67},
+    {"source": "GBR", "target": "DEU", "value": 71},
+    {"source": "GBR", "target": "KWT", "value": 97},
+    {"source": "JOR", "target": "AUS", "value": 8.4},
+    {"source": "JOR", "target": "GBR", "value": 9.4},
+    {"source": "JOR", "target": "DEU", "value": 9.4},
+    {"source": "JOR", "target": "KWT", "value": 7.5},
+    {"source": "DEU", "target": "AUS", "value": 0.8},
+    {"source": "DEU", "target": "JOR", "value": 2.3},
+    {"source": "DEU", "target": "GBR", "value": 0.2},
+    {"source": "DEU", "target": "KWT", "value": 0.5},
+    {"source": "KWT", "target": "AUS", "value": 6.7},
+    {"source": "KWT", "target": "JOR", "value": 7.1},
+    {"source": "KWT", "target": "DEU", "value": 4.1},
+    {"source": "KWT", "target": "GBR", "value": 5.1}
+  ]
+}
