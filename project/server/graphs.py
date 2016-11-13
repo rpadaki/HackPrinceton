@@ -9,7 +9,8 @@ from flask import Flask, request, Response
 from project.server import app
 
 countries = cg.analyze()
-name_dict = {k:v.name for k, v in countries.items()}
+name_dict = {}
+# name_dict = {k:v.name for k, v in countries.items()}
 
 @app.route('/graph')
 def graph():
