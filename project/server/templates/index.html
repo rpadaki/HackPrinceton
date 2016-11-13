@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 <!DOCTYPE html>
 <meta charset="utf-8">
 <style>
@@ -74,3 +75,56 @@ function dragended(d) {
   d.fy = null;
 }
 </script>
+=======
+            handleChange(event) {
+                this.setState({value: event.target.value});
+            }
+
+            handleSubmit(event) {
+                alert('A name was submitted: ' + this.state.value);
+                event.preventDefault();
+            }
+
+            render() {
+                return (
+                        <form role="form" onSubmit={this.handleSubmit}>
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-addon" id="sizing-addon1">$</span>
+                                <input type="number" class="form-control offset-md-4" name="number" placeholder="Enter Transfer Amount (USD)" value={this.state.value} onChange={this.handleChange} />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit" value="Submit">Submit</button>
+                                </span>
+                            </div>
+                        </form>
+                );
+            }
+        }
+
+        function formatName(user) {
+            return user.firstName + ' ' + user.lastName;
+        }
+
+        const user = {
+            firstName: 'Harper',
+            lastName: 'Perez'
+        };
+
+        const element = (<h1>Hello, {formatName(user)}!</h1>);
+
+        var App = React.createClass({
+            render: function() {
+                return (
+
+                )
+            }
+        });
+
+        ReactDOM.render(
+        element,
+        document.getElementById('dataCanvas')
+        );
+    </script>
+
+</body>
+</html>
+>>>>>>> afd7618e5f49d4a771702229b2e2eed1230f6319
