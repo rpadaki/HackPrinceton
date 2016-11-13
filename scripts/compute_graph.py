@@ -59,7 +59,7 @@ if __name__=="__main__":
 
     for country in countries:
         for country_dest in countries[country].links:
-            countries[country].getMinLink(400., country_dest)
+            countries[country].getMinLink(10000., country_dest)
 
     for country in countries:
         print(country, end=" ")
