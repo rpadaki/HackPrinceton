@@ -9,17 +9,18 @@ from flask import Flask, render_template, request, Response
 from project.server import app
 
 countries = cg.analyze()
-name_dict = {}
+# name_dict = {}
 # name_dict = {k:v.name for k, v in countries.items()}
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-	print("hello")
-	if request.method == 'POST':
-		value = int(request.form['number'])
-		add_one = value
-		return render_template('index.html', string="TESTING", value=add_one)
-	return render_template('index.html', string="TESTING DEFAULT")
+	# print("hello")
+	# if request.method == 'POST':
+	# 	value = int(request.form['number'])
+	# 	add_one = value
+	# 	return render_template('index.html', string="TESTING", value=add_one)
+	# return render_template('index.html', string="TESTING DEFAULT")
+	return render_template('canvastest.html')
 
 @app.route('/graph')
 def graph():
@@ -30,9 +31,9 @@ def graph():
 	connections = cg.generate(amount,countries)
 	f, predecessors, distance = pf.compute(connections)
 	g = gr.whole(distance)
-	nodes = g.nodes()
-	relabel = {k:v for k, v in name_dict.items() if k in nodes}
-	g = nx.relabel_nodes(g,relabel,True)
+	# nodes = g.nodes()
+	# relabel = {k:v for k, v in name_dict.items() if k in nodes}
+	# g = nx.relabel_nodes(g,relabel,True)
 	labels = nx.get_edge_attributes(g,'weight')
 	newlabels = {k:amount*(1-np.exp(-v)) for k,v in labels.items()}
 	for s in g:
@@ -56,13 +57,13 @@ def orbit():
 		start = request.args.get('start','')
 	except ValueError:
 		amount = 200.
-		start = ''
+		start = 'USA'
 	connections = cg.generate(amount,countries)
 	f, predecessors, distance = pf.compute(connections)
 	g = gr.planet(start, distance)
-	nodes = g.nodes()
-	relabel = {k:v for k, v in name_dict.items() if k in nodes}
-	g = nx.relabel_nodes(g,relabel,True)
+	# nodes = g.nodes()
+	# relabel = {k:v for k, v in name_dict.items() if k in nodes}
+	# g = nx.relabel_nodes(g,relabel,True)
 	labels = nx.get_edge_attributes(g,'weight')
 	newlabels = {k:amount*(1-np.exp(-v)) for k,v in labels.items()}
 	for s in g:

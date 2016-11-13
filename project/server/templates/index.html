@@ -1,113 +1,76 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Test Template</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="static/bower_components/bootstrap/dist/css/bootstrap.min.css"  />
-    <link rel="stylesheet" href="static/css/main.css" />
-    <!--<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>-->
-    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-
-    <!-- React script dependency -->
-    <script src="static/bower_components/react/react.js"></script>
-    <script src="static/bower_components/react/react-dom.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <!-- React router -->
-    <script src="https://npmcdn.com/react-router@2.4.0/umd/ReactRouter.min.js"></script>
-
-</head>
-<body>
-
-    <!-- Parent container for React components -->
-    <div class="container animate-in center-block text-center">
-        <h1>Provocative title</h1>
-        <h1>Hello, {{string}}</h1>
-
-        <p>Your returned value is {{value}}</p>
-    </div>
-
-    <div class="container">
-        <div class="container animate-in" id="dataCanvas"></div>
-    </div>
-
-    <div class="container text-center center-block">
-        <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-                <form role="form" method="post">
-                    <div class="input-group input-group-lg">
-                        <span class="input-group-addon" id="sizing-addon1">$</span>
-                        <input type="number" class="form-control offset-md-4" name="number" placeholder="Enter Transfer Amount (USD)">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">Submit</button>
-                        </span>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-    </div>
-
-    <div id=''></div>
-
-    <script type="text/babel">
-        class moneyForm extends React.Component {
-            constructor(props) {
-                super(props);
-                this.state = {value: ''};
-                this.handleChange = this.handleChange.bind(this);
-                this.handleSubmit = this.handleSubmit.bind(this);
-            }
-
-            handleChange(event) {
-                this.setState({value: event.target.value});
-            }
-
-            handleSubmit(event) {
-                alert('A name was submitted: ' + this.state.value);
-                event.preventDefault();
-            }
-
-            render() {
-                return (
-                        <form onSubmit={this.handleSubmit}>
-                            Name:
-                            <input type="text" value={this.state.value} onChange={this.handleChange} />
-                            <input type="submit" value="Submit" />
-                        </form>
-                );
-            }
-        }
-
-        function formatName(user) {
-            return user.firstName + ' ' + user.lastName;
-        }
-
-        const user = {
-            firstName: 'Harper',
-            lastName: 'Perez'
-        };
-
-        const element = (<h1>Hello, {formatName(user)}!</h1>);
-
-        var App = React.createClass({
-            render: function() {
-                return (
-
-                )
-            }
-        });
-
-        ReactDOM.render(
-        element,
-        document.getElementById('dataCanvas')
-        );
-    </script>
-
-</body>
-</html>
+<meta charset="utf-8">
+<style>
+.links line {
+  stroke: #999;
+  stroke-opacity: 0.6;
+}
+.nodes circle {
+  stroke: #fff;
+  stroke-width: 15px;
+}
+</style>
+<svg width="960" height="600"></svg>
+<script src="static/js/d3.js"></script>
+<script>
+var svg = d3.select("svg"),
+    width = +svg.attr("width"),
+    height = +svg.attr("height");
+var color = d3.scaleOrdinal(d3.schemeCategory20);
+var simulation = d3.forceSimulation()
+    .force("link", d3.forceLink().id(function(d) { return d.id; }))
+    .force("charge", d3.forceManyBody())
+    .force("center", d3.forceCenter(width / 2, height / 2));
+d3.json("/orbit?amount=300&start=USA", function(error, graph) {
+  if (error) throw error;
+  var link = svg.append("g")
+      .attr("class", "links")
+    .selectAll("line")
+    .data(graph.links)
+    .enter().append("line")
+      .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
+  var node = svg.append("g")
+      .attr("class", "nodes")
+    .selectAll("circle")
+    .data(graph.nodes)
+    .enter().append("circle")
+      .attr("r", 5)
+      .attr("fill", function(d) { return color(d.group); })
+      .call(d3.drag()
+          .on("start", dragstarted)
+          .on("drag", dragged)
+          .on("end", dragended));
+  node.append("title")
+      .text(function(d) { return d.id; });
+  simulation
+      .nodes(graph.nodes)
+      .on("tick", ticked);
+  simulation.force("link")
+      .links(graph.links);
+  function ticked() {
+    link
+        .attr("x1", function(d) { return d.source.x; })
+        .attr("y1", function(d) { return d.source.y; })
+        .attr("x2", function(d) { return d.target.x; })
+        .attr("y2", function(d) { return d.target.y; });
+    node
+        .attr("cx", function(d) { return d.x; })
+        .attr("cy", function(d) { return d.y; });
+  }
+});
+function dragstarted(d) {
+  if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+  d.fx = d.x;
+  d.fy = d.y;
+}
+function dragged(d) {
+  d.fx = d3.event.x;
+  d.fy = d3.event.y;
+}
+function dragended(d) {
+  if (!d3.event.active) simulation.alphaTarget(0);
+  d.fx = null;
+  d.fy = null;
+}
+</script>
