@@ -40,7 +40,17 @@ class Country:
 def find_index(category):
     return CATEGORY_NUM[CATEGORIES.index(category)]
 
-if __name__=="__main__":
+def generate(amount):
+        # creates a list of all the data and costs to be passed to pathfinder
+    connections = []
+    for country in countries:
+        for country_dest in countries[country].links:
+            countries[country].getMinLink(10000., country_dest)
+            row = [country.id, country_dest, country.costs[country_dest]]
+            connections.append(row)
+    return connections
+
+def analyze():
     countries = {}
     with open(COUNTRY_NAME_DIR, 'r') as rin:
         lines = rin.readlines()
@@ -56,12 +66,4 @@ if __name__=="__main__":
             for row in range(1, len(lines)):
                 data_split = lines[row].split(',')
                 countries[data_split[find_index("source_code")]].addLink(data_split[find_index("destination_code")], data_split[find_index("total_cost_200")], data_split[find_index("total_cost_500")])
-
-    for country in countries:
-        for country_dest in countries[country].links:
-            countries[country].getMinLink(10000., country_dest)
-
-    for country in countries:
-        print(country, end=" ")
-        print(countries[country].costs)
 
