@@ -1,6 +1,21 @@
 """ Outputs graphs in ready-to-draw format """
 import networkx as nx
 
+def whole(distances):
+	# graphs all node and connects them to all other nodes, with the length
+	# being a function of the actual distance (no path included)
+	g = nx.DiGraph()
+
+	# for each key-value pair in distances, adds an edge whose start is the
+	# start point, end is the key, and weight is the value
+	# only does so if distance is not infinite
+	for start in distances:
+		for key, value in distances[start].items():
+			if not value == "inf" and not start == key:
+				g.add_edge(start, key, weight=value)
+
+	return g
+
 def tree(start, predecessors, graph):
 	# graphs the shortest path between one node and every other node
 	g = nx.DiGraph()
